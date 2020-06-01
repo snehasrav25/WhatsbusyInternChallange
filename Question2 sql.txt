@@ -1,0 +1,6 @@
+select manager.first_name,manager.last_name,employee.first_name,employee.last_name
+FROM tabel_1
+INNER JOIN manager ON tabel_1.id_manager = manager.id_manager
+INNER JOIN employee ON tabel_1.id_employee = employee.id_employee
+where tabel_1.dt_work_from = Convert(datetime, '2020-01-01' )
+ and tabel_1.dt_work_to=Convert(datetime, '2020-01-31' )
